@@ -28,11 +28,7 @@ imageStream = queue.Queue()                                             #FIFO da
 
 pr.enable()                                                             #start profiler
 
-def imageRead(q):
-    while True:
-        q.put(captureImage())                                           #capture image and append to queue
-
-imageReader = threading.Thread(target=imageRead, args=(imageStream,))   #create thread for capturing images
+imageReader = threading.Thread(target=captureImagePicam, args=(imageStream,))   #create thread for capturing images
 imageReader.daemon = True                                               #thread will close when main thread exits
 imageReader.start()
         
