@@ -29,6 +29,6 @@ def captureImagePicam(q):
         rawCapture.truncate(0)
         
         if key == ord("q"):
-		break
+	    break
 
     camera.close()
