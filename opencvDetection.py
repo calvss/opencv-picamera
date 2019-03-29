@@ -6,7 +6,7 @@ import time
 import math
 import threading
 import queue
-from captureImagePicam import captureImage
+from captureImagePicam import captureImagePicam
 from statistics import stdev
 from statistics import mean
 from faceObject import faceObject
