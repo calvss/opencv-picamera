@@ -18,7 +18,7 @@ def captureImagePicam(q):
         start_time = time.time()
         image = frame.array
         
-        q.put(frame)
+        q.put(image)
         rawCapture.truncate(0)
         
         print("FPS: ", 1.0 / (time.time() - start_time)) # FPS = 1 / time to process loop
