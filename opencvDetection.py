@@ -35,8 +35,8 @@ imageReader.start()
 time.sleep(0.5)
 
 frame = imageStream.get()                                               #get one image from queue, will wait if there is no content
-#print(len(frame[0]))                                                    #print image size
-#print(len(frame))                                                       #print image size
+print(len(frame[0]))                                                    #print image size
+print(len(frame))                                                       #print image size
 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 initialFaces = faceCascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(5, 5)) #initial set of faces for tracking
