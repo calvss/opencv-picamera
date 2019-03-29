@@ -23,6 +23,7 @@ def captureImagePicam(q):
         
         print("FPS: ", 1.0 / (time.time() - start_time)) # FPS = 1 / time to process loop
         
+        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         cv2.imshow("Frame", image)
         key = cv2.waitKey(1) & 0xFF
         
