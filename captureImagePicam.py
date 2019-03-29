@@ -17,7 +17,6 @@ def captureImagePicam(q):
     for frame in camera.capture_continuous(rawCapture, format="bgr"):
         start_time = time.time()
         image = frame.array
-        frame = frame[::-1]
         
         q.put(frame)
         
